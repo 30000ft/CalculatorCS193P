@@ -45,21 +45,35 @@ class ViewController: UIViewController {
         operationInitiation(operation)
         
         switch operation {
-        case "×":   performOperation { $0 * $1 }
-        case "÷":   performOperation { $1 / $0 }
-        case "+":   performOperation { $0 + $1 }
-        case "−":   performOperation { $1 - $0 }
-        case "√":   performSqrt()
-        case "sin": performOperation { sin($0) }
-        case "cos": performOperation { cos($0) }
-        case "tan": performOperation { tan($0) }
-        case "π":   performPI()
-        case "+/−": userIsInTheMiddleOfTypingANumber = true
-                    changeSignOfTheCurrentDisplayingNumber()
-        case "AC":  resetAll()
-        case "C":   backspace()
-        case "%":   dividedByOneHundred()
-        default: break
+        case "×":
+            performOperation { $0 * $1 }
+        case "÷":
+            performOperation { $1 / $0 }
+        case "+":
+            performOperation { $0 + $1 }
+        case "−":
+            performOperation { $1 - $0 }
+        case "√":
+            performSqrt()
+        case "sin":
+            performOperation { sin($0) }
+        case "cos":
+            performOperation { cos($0) }
+        case "tan":
+            performOperation { tan($0) }
+        case "π":
+            performPI()
+        case "+/−":
+            userIsInTheMiddleOfTypingANumber = true
+            changeSignOfTheCurrentDisplayingNumber()
+        case "AC":
+            resetAll()
+        case "C":
+            backspace()
+        case "%":
+            dividedByOneHundred()
+        default:
+            break
         }
         
     }

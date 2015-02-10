@@ -26,7 +26,6 @@ class CalculatorBrain
         knownOps["+"] = Op.BinaryOperation("+", +)
         knownOps["−"] = Op.BinaryOperation("−") { $1 - $0 }
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
-        
     }
     
     func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
